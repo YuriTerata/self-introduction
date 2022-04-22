@@ -12,6 +12,7 @@ ul{
 	list-style: none;
 }
 
+
 a{
     outline: none;
 }
@@ -28,7 +29,7 @@ a:active{
 	z-index: 999;
 	width: 100vw;
 	height: 100vh;
-	background:#00A6FE;
+	background:#a846fb;
 	opacity: 0.95;
 	text-align:center;
 	color:#fff;
@@ -63,6 +64,7 @@ a:active{
     line-height: 1;
     letter-spacing: 0.05em;
     color:#fff;
+    font-family: 'Beau Rivage', cursive;
 }
 
 .heading-block p{
@@ -152,8 +154,8 @@ a:active{
     top: 42%;
     cursor: pointer;/*マウスカーソルを指マークに*/
     outline: none;/*クリックをしたら出てくる枠線を消す*/
-    border-top: 2px solid #7b68ee;/*矢印の色*/
-    border-right: 2px solid #7b68ee;/*矢印の色*/
+    border-top: 2px solid #a846fb;/*矢印の色*/
+    border-right: 2px solid #a846fb;/*矢印の色*/
     height: 25px;
     width: 25px;
 }
@@ -191,7 +193,7 @@ a:active{
 }
 
 .slick-dots .slick-active button{
-    background:#333;/*ドットボタンの現在地表示の色*/
+    background:#fff;/*ドットボタンの現在地表示の色*/
 }
 
 .openbtn{
@@ -213,7 +215,7 @@ a:active{
     left: 14px;
     height: 3px;
     border-radius: 2px;
-	background-color:#7b68ee;
+	background-color:black;
   	width: 45%;
   }
 
@@ -282,6 +284,7 @@ a:active{
 #g-nav li{
     text-align: center;
     font-size:30px;
+
 }
 
 #g-nav li a{
@@ -341,7 +344,7 @@ a:active{
 	font-size:50px;
 }
 .jp{
-	font-size:20px;
+	font-size:30px;
 }
 .hobby-h2{
 	font-size:100px;
@@ -374,6 +377,12 @@ a:active{
   z-index: 2;
   display: flex;
   height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.split__img-wrapper{
+	width:100%;
 }
 
 
@@ -381,16 +390,18 @@ a:active{
 	display: inline-block;
 	box-shadow: 250px 90px 10px -5px rgba(201,201,201,0.4); /*横方向　下方向　ぼかし　広がり　色 */
 	display: block;
-    height: 500px;
     object-fit: fill;
-    width: auto;
+    width: 100%;
+
 }
 
 .split__title {
   font-size: 50px;
   font-weight: bold;
-  padding: 10px;
+  margin:0;
 }
+
+
 .split__text {
   margin-top: 10px;
   line-height: 1.6;
@@ -398,14 +409,14 @@ a:active{
 }
 
 .background {
-  background-color:
-#ffcd03;
+  background-color:#a846fb;
   position: fixed;
   top: 0;
   left: 0;
   width: 50%;
   height: 100vh;
   z-index: -2;
-  opacity: 0.6;
+  opacity: 0.3;
 }
+
 
