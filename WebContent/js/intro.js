@@ -50,3 +50,24 @@ $('.slider').slick({
 $('.slider').on('touchmove', function(event, slick, currentSlide, nextSlide){
     $('.slider').slick('slickPlay');
 });
+
+
+$(".openbtn").click(function () {//ボタンがクリックされたら
+	$(this).toggleClass('active');//ボタン自身に activeクラスを付与し
+    $("#g-nav").toggleClass('panelactive');//ナビゲーションにpanelactiveクラスを付与
+});
+
+$("#g-nav a").click(function () {//ナビゲーションのリンクがクリックされたら
+    $(".openbtn").removeClass('active');//ボタンの activeクラスを除去し
+    $("#g-nav").removeClass('panelactive');//ナビゲーションのpanelactiveクラスも除去
+});
+
+
+$a[href*="#"].click(function () {//全てのページ内リンクに適用させたい場合はa[href*="#"]のみでもOK
+	let elmHash = $(this).attr('href'); //ページ内リンクのHTMLタグhrefから、リンクされているエリアidの値を取得
+	let pos = $(elmHash).offset().top;	//idの上部の距離を取得
+	$('body,html').animate({scrollTop: pos}, 500); //取得した位置にスクロール。500の数値が大きくなるほどゆっくりスクロール
+	return false;
+});
+
+

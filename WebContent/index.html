@@ -4,21 +4,40 @@
 <meta charset="UTF-8">
 <title>Introduction</title>
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+
 <link rel="stylesheet" type="text/css" href="css/layout.css">
 </head>
-<body>
+<body background="img/card.png">
 
 <div class="wrapper">
-<div class="heading-block">
-		<h1 class="myname">Yuri Terata</h1>
-	</div>
+<section id="area1">
+
+  <div class="heading-block">
+	<h1 class="myname">Yuri Terata</h1>
+  </div>
 	<div id="splash">
-	<div id="splash_text"></div>
+	<div id="splash_text">
+	</div>
 	</div>
 
+	<ul class="slider">
+     <li class="slider-item slider-item01"></li>
+     <li class="slider-item slider-item02"></li>
+     <li class="slider-item slider-item03"></li>
+ 	</ul>
 
+ 	<div class="openbtn"><span></span><span></span><span></span>
+ 	</div>
+	<nav id="g-nav">
 
-<ul id="sns-icon">
+	<ul>
+	 <li><a href="#area1">Top</a></li>
+	 <li><a href="#area2">About me</a></li>
+	 <li><a href="#area3">Hobby</a></li>
+	</ul>
+	</nav>
+
+	<ul id="sns-icon">
 	 <li>
 	  <a href="#">
 	   <img src="img/Instagram.png" alt="Instagram">
@@ -35,13 +54,106 @@
 	  </a>
 	 </li>
 	</ul>
+</section>
 
-<ul class="slider">
-    <li class="slider-item slider-item01"></li>
-    <li class="slider-item slider-item02"></li>
-    <li class="slider-item slider-item03"></li>
-  </ul>
-</div>
+<section id="area2">
+ <div class="about-area">
+  <figure class="about-img">
+   <img src="img/me.jpg">
+  </figure>
+  <div class="about-content">
+	<h2 class="about-h2"><span class="en">A</span>bout me<br>
+	<span class="jp">私について</span>
+	</h2>
+	<p>誕生日：2000/03/28</p>
+	<p>星座：おひつじ座</p>
+	<p>血液型：？</p>
+	<p>生まれた場所：東京</p>
+	<p>出身大学：中央大学文学部人文社会学科社会情報学専攻図書館情報学コース</p>
+	<p>好きな食べ物：パンと麺と果物と紅茶</p>
+	<p>嫌いな食べ物：マヨネーズ</p>
+	<p>好きな色：紫と青</p>
+  </div>
+  </div>
+</section>
+
+
+<section id="area3">
+	<h2 class="hobby-h2">hobby</h2>
+
+	<div class="background"></div>
+
+	<div class="split">
+
+  	<div class="split__img-wrapper">
+		<figure class="split__img">
+     		<img src="img/001.jpg" alt="">
+    	</figure>
+  	</div>
+
+  	<div class="split__body">
+    	<h2 class="split__title">MUSIC</h2>
+    	<p class="split__text">Fender USA<br>Ibanes</p>
+  	</div>
+
+  	<div class="split__img-wrapper">
+		<figure class="split__img">
+     		<img src="https://i.postimg.cc/J7kB8ptr/sample-cat01.jpg" alt="">
+    	</figure>
+  	</div>
+
+
+	</div>
+
+
+	<div class="split">
+
+  	<div class="split__img-wrapper">
+		<figure class="split__img">
+     		<img src="https://i.postimg.cc/J7kB8ptr/sample-cat01.jpg" alt="">
+    	</figure>
+  	</div>
+
+  	<div class="split__body">
+    	<h2 class="split__title">BOOK</h2>
+    	<p class="split__text"></p>
+  	</div>
+  	<div class="split__img-wrapper">
+		<figure class="split__img">
+     		<img src="https://i.postimg.cc/J7kB8ptr/sample-cat01.jpg" alt="">
+    	</figure>
+  	</div>
+
+	</div>
+
+	<div class="split">
+
+  	<div class="split__img-wrapper">
+		<figure class="split__img">
+     		<img src="https://i.postimg.cc/J7kB8ptr/sample-cat01.jpg" alt="">
+    	</figure>
+  	</div>
+
+  	<div class="split__body">
+    	<h2 class="split__title">Title</h2>
+    	<p class="split__text"></p>
+  	</div>
+
+  	<div class="split__img-wrapper">
+		<figure class="split__img">
+     		<img src="https://i.postimg.cc/J7kB8ptr/sample-cat01.jpg" alt="">
+    	</figure>
+  	</div>
+
+	</div>
+
+
+
+ </section>
+
+
+ </div>
+
 
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>

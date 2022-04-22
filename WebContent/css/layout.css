@@ -1,6 +1,7 @@
 @charset "UTF-8";
 
 @media screen and (max-width:768px) {
+
 body{
 	font-size:0.8rem;
 	}
@@ -25,9 +26,9 @@ a:active{
   /*fixedで全面に固定*/
 	position: fixed;
 	z-index: 999;
-	width: 100%;
-	height: 100%;
-	background:#7b68ee;
+	width: 100vw;
+	height: 100vh;
+	background:#00A6FE;
 	opacity: 0.95;
 	text-align:center;
 	color:#fff;
@@ -95,7 +96,7 @@ a:active{
 #sns-icon{
 	z-index: 2;
     position: fixed;
-    right:20px;
+    left:20px;
     top:20px;
     display: flex;
 }
@@ -109,7 +110,7 @@ a:active{
 }
 
 #sns-icon a:hover{
-    opacity: 0.7;
+    opacity: 0.6;
 }
 
 /*スライドショー*/
@@ -135,7 +136,7 @@ a:active{
 }
 
 .slider-item {
-    width: 100%;/*各スライダー全体の横幅を画面の高さいっぱい（100%）にする*/
+    width: 100vw;/*各スライダー全体の横幅を画面の高さいっぱい（100%）にする*/
     height:100vh;/*各スライダー全体の縦幅を画面の高さいっぱい（100vh）にする*/
     background-repeat: no-repeat;/*背景画像をリピートしない*/
     background-position: center;/*背景画像の位置を中央に*/
@@ -151,8 +152,8 @@ a:active{
     top: 42%;
     cursor: pointer;/*マウスカーソルを指マークに*/
     outline: none;/*クリックをしたら出てくる枠線を消す*/
-    border-top: 2px solid #fff;/*矢印の色*/
-    border-right: 2px solid #fff;/*矢印の色*/
+    border-top: 2px solid #7b68ee;/*矢印の色*/
+    border-right: 2px solid #7b68ee;/*矢印の色*/
     height: 25px;
     width: 25px;
 }
@@ -193,7 +194,218 @@ a:active{
     background:#333;/*ドットボタンの現在地表示の色*/
 }
 
+.openbtn{
+	position:fixed;
+    z-index: 9999;/*ボタンを最前面に*/
+	top:10px;
+	right: 10px;
+	cursor: pointer;
+    width: 100px;
+    height:100px;
+}
+
+/*×に変化*/
+.openbtn span{
+	z-index: 9999;
+    display: inline-block;
+    transition: all .4s;
+    position: absolute;
+    left: 14px;
+    height: 3px;
+    border-radius: 2px;
+	background-color:#7b68ee;
+  	width: 45%;
+  }
+
+.openbtn span:nth-of-type(1) {
+	top:15px;
+}
+
+.openbtn span:nth-of-type(2) {
+	top:30px;
+}
+
+.openbtn span:nth-of-type(3) {
+	top:45px;
+}
+
+.openbtn.active span:nth-of-type(1) {
+    top: 18px;
+    left: 18px;
+    transform: translateY(6px) rotate(-45deg);
+    width: 50%;
+}
+
+.openbtn.active span:nth-of-type(2) {
+	opacity: 0;
+}
+
+.openbtn.active span:nth-of-type(3){
+    top: 30px;
+    left: 18px;
+    transform: translateY(-6px) rotate(45deg);
+    width: 50%;
+}
+
+
+#g-nav{
+    /*position:fixed;にし、z-indexの数値を大きくして前面へ*/
+    position:fixed;
+    z-index: 999;
+    /*ナビのスタート位置と形状*/
+	top:0;
+    right: -120%;
+	width:100%;
+    height: 100vh;/*ナビの高さ*/
+	background:#a846fb;
+    /*動き*/
+	transition: all 0.6s;
+}
+
+/*アクティブクラスがついたら位置を0に*/
+#g-nav.panelactive{
+    right: 0;
+}
+
+/*ナビゲーション*/
+#g-nav ul {
+    /*ナビゲーション天地中央揃え*/
+    position: absolute;
+    z-index: 999;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+
+/*リストのレイアウト設定*/
+
+#g-nav li{
+    text-align: center;
+    font-size:30px;
+}
+
+#g-nav li a{
+	color: #333;
+	text-decoration: none;
+	padding:10px;
+	display: block;
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+	font-weight: bold;
+}
+
+#area2{
+    margin:0 0 200px 0;
+}
+
+@media screen and (max-width:960px) {
+#area2{
+    margin:0 0 100px 0;
+}
+}
+
+.about-area{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.about-area p{
+    margin: 0 0 30px 0;
+}
+
+.about-area .txt-r{
+     text-align: right;
+}
+
+.about-lead{
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.about-img{
+    width:50%;
+}
+
+.about-img img{
+    width:70%;
+    margin-top: 50px; /* 画像の上の余白*/
+	display: inline-block;
+	box-shadow: 250px 90px 10px -5px rgba(201,201,201,0.4); /*横方向　下方向　ぼかし　広がり　色 */
+}
+
+.about-content{
+    width:40%;
+}
+.about-h2{
+	font-size:50px;
+}
+.jp{
+	font-size:20px;
+}
+.hobby-h2{
+	font-size:100px;
+	text-align:center;
+}
 
 
 
+
+.parent{
+  display: flex;
+  height: 100vh;
+}
+.child img{
+  height: 100vh;
+  width: 50%;
+}
+@media screen and (max-width: 768px) {
+  .parent{
+    flex-direction: column;
+  }
+  .child{
+    width: 100%;
+  }
+}
+
+
+
+.split {
+  z-index: 2;
+  display: flex;
+  height: 100vh;
+}
+
+
+.split__img img{
+	display: inline-block;
+	box-shadow: 250px 90px 10px -5px rgba(201,201,201,0.4); /*横方向　下方向　ぼかし　広がり　色 */
+	display: block;
+    height: 500px;
+    object-fit: fill;
+    width: auto;
+}
+
+.split__title {
+  font-size: 50px;
+  font-weight: bold;
+  padding: 10px;
+}
+.split__text {
+  margin-top: 10px;
+  line-height: 1.6;
+  padding: 10px;
+}
+
+.background {
+  background-color:
+#ffcd03;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100vh;
+  z-index: -2;
+  opacity: 0.6;
+}
 
