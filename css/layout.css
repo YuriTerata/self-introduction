@@ -1,24 +1,22 @@
 @charset "UTF-8";
 
 @media screen and (max-width:768px) {
-
-body{
-	font-size:0.8rem;
+	body{
+		font-size:0.8rem;
 	}
 }
+
 ul{
 	margin:0;
 	padding: 0;
 	list-style: none;
 }
 
-
 a{
     outline: none;
 }
 
-a:hover,
-a:active{
+a:hover,a:active{
 	text-decoration: none;
 }
 
@@ -45,9 +43,7 @@ a:active{
 	color: #fff;
 }
 
-
 /* heading */
-
 .heading-block{
     position: absolute;
     top:50%;
@@ -73,18 +69,18 @@ a:active{
 }
 
 @media only screen and (max-width:768px) {
-.heading-block h1{
-    font-size:4em;
-    line-height: 1.5;
+	.heading-block h1{
+		font-size:4em;
+		line-height: 1.5;
     }
-.heading-block p{
-    font-size:1.5em;
-    letter-spacing: 0.2em;
+
+	.heading-block p{
+    	font-size:1.5em;
+    	letter-spacing: 0.2em;
     }
 }
 
 /*snsicon*/
-
 #sns-icon img{
     width: 50px;
 }
@@ -92,7 +88,7 @@ a:active{
 @media only screen and (max-width:768px){
 	#sns-icon img{
     width: 30px;
-}
+	}
 }
 
 #sns-icon{
@@ -123,8 +119,8 @@ a:active{
 	/*↑z-indexの値をh1のz-indexの値よりも小さくして背景に回す*/
 	height: 100vh;/*スライダー全体の縦幅を画面の高さいっぱい（100vh）にする*/
 }
-/*背景画像設定*/
 
+/*背景画像設定*/
 .slider-item01{
     background:url(../img/001.jpg);
 }
@@ -146,9 +142,7 @@ a:active{
 }
 
 /*矢印の設定*/
-
-.slick-prev,
-.slick-next {
+.slick-prev,.slick-next {
     position: absolute;
 	z-index: 3;
     top: 42%;
@@ -182,6 +176,7 @@ a:active{
     display:inline-block;
 	margin:0 5px;
 }
+
 .slick-dots button {
     color: transparent;
     outline: none;
@@ -249,7 +244,6 @@ a:active{
     width: 50%;
 }
 
-
 #g-nav{
     /*position:fixed;にし、z-indexの数値を大きくして前面へ*/
     position:fixed;
@@ -280,11 +274,9 @@ a:active{
 }
 
 /*リストのレイアウト設定*/
-
 #g-nav li{
     text-align: center;
     font-size:30px;
-
 }
 
 #g-nav li a{
@@ -302,9 +294,9 @@ a:active{
 }
 
 @media screen and (max-width:960px) {
-#area2{
-    margin:0 0 100px 0;
-}
+	#area2{
+    	margin:0 0 100px 0;
+		}
 }
 
 .about-area{
@@ -340,38 +332,39 @@ a:active{
 .about-content{
     width:40%;
 }
+
 .about-h2{
 	font-size:50px;
 }
+
 .jp{
 	font-size:30px;
 }
+
 .hobby-h2{
 	font-size:100px;
 	text-align:center;
 }
 
-
-
-
 .parent{
   display: flex;
   height: 100vh;
 }
+
 .child img{
   height: 100vh;
   width: 50%;
 }
+
 @media screen and (max-width: 768px) {
-  .parent{
-    flex-direction: column;
-  }
-  .child{
-    width: 100%;
-  }
+ 	.parent{
+  		 flex-direction: column;
+ 	}
+
+ 	.child{
+		width: 100%;
+	}
 }
-
-
 
 .split {
   z-index: 2;
@@ -385,14 +378,12 @@ a:active{
 	width:100%;
 }
 
-
 .split__img img{
 	display: inline-block;
 	box-shadow: 250px 90px 10px -5px rgba(201,201,201,0.4); /*横方向　下方向　ぼかし　広がり　色 */
 	display: block;
     object-fit: fill;
     width: 100%;
-
 }
 
 .split__title {
@@ -400,7 +391,6 @@ a:active{
   font-weight: bold;
   margin:0;
 }
-
 
 .split__text {
   margin-top: 10px;
